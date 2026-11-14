@@ -4,6 +4,11 @@ A single-page personal portfolio for **Kartikey**, a B.Tech CSE (AI/ML) undergra
 
 Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build step, no dependencies. Designed to load fast, work on every screen size, and stay accessible.
 
+## Live site
+
+- **GitHub Pages:** [kartikey0907.github.io/portfolio](https://kartikey0907.github.io/portfolio/)
+- **Source:** [github.com/Kartikey0907/portfolio](https://github.com/Kartikey0907/portfolio)
+
 ## What's inside
 
 - Dark, responsive single-page layout
@@ -12,7 +17,7 @@ Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build s
 - Scroll-reveal animations, active navigation, scroll progress bar, and mobile menu
 - Copy-email button with a toast notification
 - Downloadable resume
-- SEO meta tags, SVG favicon, and JSON-LD person schema
+- SEO meta tags, canonical URL, Open Graph/Twitter preview image, SVG favicon, and JSON-LD person schema
 - Respects `prefers-reduced-motion`
 
 ## Files
@@ -26,6 +31,7 @@ portfolio/
 │   └── main.js                 # Navigation, animations, copy button
 ├── assets/
 │   ├── favicon.svg             # Browser icon
+│   ├── og-image.png            # Social sharing preview (1200×630)
 │   └── Kartikey-Resume.pdf     # Downloadable resume
 └── README.md
 ```
@@ -44,30 +50,30 @@ The Google Fonts and external links need an internet connection. Everything else
 
 ## Deploy
 
-### Vercel (recommended)
+The site is live on **GitHub Pages** at <https://kartikey0907.github.io/portfolio/>.
 
-1. Push this folder to a GitHub repository.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
-3. Framework preset: **Other**. Build command: leave empty. Output directory: leave empty.
-4. Deploy.
+### GitHub Pages (live)
 
-Every push to the default branch will redeploy automatically.
+1. Push changes to the `main` branch.
+2. In **Settings → Pages**, the source is **Deploy from a branch → main → / (root)**.
+3. Every push to `main` redeploys the site automatically.
 
-### GitHub Pages
+### Vercel (optional)
 
-1. Create a repository named `Kartikey0907.github.io` (or any repository name).
-2. Push these files to the `main` branch.
-3. Open **Settings → Pages** and set the source to **Deploy from a branch → main → / (root)**.
-4. The site will be available at `https://kartikey0907.github.io` (or `https://kartikey0907.github.io/<repo-name>/`).
+1. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
+2. Framework preset: **Other**. Build command: leave empty. Output directory: leave empty.
+3. Deploy.
 
-If you use a project repository instead of the username repository, update the relative asset paths only if you move files out of the root.
+If you move to a custom domain or a different host, update the canonical and social-preview URLs in `index.html` (the `canonical`, `og:url`, `og:image`, `twitter:image`, and JSON-LD `url` tags).
 
 ## Updating content
 
 - **Text:** edit `index.html` directly; each section is marked with a comment and a numbered heading.
 - **Colors and fonts:** change the custom properties at the top of `css/styles.css` (`--accent`, `--gradient`, `--font-heading`, etc.).
 - **Resume:** replace `assets/Kartikey-Resume.pdf` with a newer PDF, keeping the same filename.
+- **Social preview:** replace `assets/og-image.png` (1200×630) when your role or contact details change.
 - **Links:** search `index.html` for `github.com/Kartikey0907`, `linkedin.com/in/kartikey-6a5854388`, and `kartikey0905@gmail.com` if any of them change.
+- **Domain:** if the site moves, update the canonical and social-preview URLs listed in the deploy section above.
 
 ## Notes
 
